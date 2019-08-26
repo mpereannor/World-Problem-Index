@@ -9,14 +9,23 @@
     .row-left{
         .flexDisplayMethod(column, space-between);
         .region(column, space-evenly);
-    };
+    }
 
     .row-center{
-        .flexDisplayMethod(column,space-between);
+        .flexDisplayMethod(column,space-around);
         .navBar-main{
-            .navBar-main-nav{
+            nav{
+                .flexDisplayMethod(row, space-around);
+            }
+        .main-content{
+            .flexDisplayMethod(column, space-evenly);
+            .content-main-1{
                 .flexDisplayMethod(row, space-evenly);
             }
+            .content-main-2{
+                .flexDisplayMethod(row, space-evenly);
+            }
+        }
 
         }
     };
