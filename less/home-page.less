@@ -46,7 +46,6 @@
                     width: 800px;
                     height: 100px;
                     margin: 0;
-                    border: 4px solid red;
 
                     .img{
                         max-width: 100%;
@@ -103,15 +102,32 @@
 
     .row-right{
         width: 500px;
+        display: flex;
+        flex-direction: column;
+
+        
 
         .problem-solution-index{
             .problem{
                 .problem-table{
+        
                     .p-table{
+                        width: 100%;
+                        height: auto;
                             border: 1px solid black;
-                            background-color: green;
+                            background-color: pink;
+                        }
+ 
                     }
                 }
+
+            .solution{   
+                .experiment-table {
+                    table{
+                        background-color: magenta;
+                    }
+                }
+                
             }
         }
     }
