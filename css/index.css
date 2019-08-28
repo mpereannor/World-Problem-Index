@@ -155,6 +155,7 @@ h3 {
 p {
   line-height: 1.5;
   font-size: 1.6rem;
+  color: #1a1a1a;
 }
 img {
   max-width: 100%;
@@ -163,14 +164,65 @@ img {
 .container {
   display: flex;
   justify-content: space-around;
+  padding: 20px;
+  align-items: baseline;
 }
 .container .row-left {
   width: 200px;
   display: flex;
   flex-direction: column;
 }
+.container .row-left .region .region-overview {
+  border-top: 4px solid #727D8C;
+  border-bottom: 4px solid #727D8C;
+}
 .container .row-left .region .region-overview .issueList {
-  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.container .row-left .region .region-africa {
+  border-bottom: 4px solid #727D8C;
+}
+.container .row-left .region .region-africa li {
+  font-size: 1.5rem;
+}
+.container .row-left .region .region-africa li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #8C2034;
+}
+.container .row-left .region .region-americas {
+  border-bottom: 4px solid #727D8C;
+}
+.container .row-left .region .region-americas li {
+  font-size: 1.5rem;
+}
+.container .row-left .region .region-americas li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #8C2034;
+}
+.container .row-left .region .region-asia {
+  border-bottom: 4px solid #727D8C;
+}
+.container .row-left .region .region-asia li {
+  font-size: 1.5rem;
+}
+.container .row-left .region .region-asia li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #8C2034;
+}
+.container .row-left .region .region-europe {
+  border-bottom: 4px solid #727D8C;
+}
+.container .row-left .region .region-europe li {
+  font-size: 1.5rem;
+}
+.container .row-left .region .region-europe li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #8C2034;
 }
 .container .row-center {
   display: flex;
@@ -180,117 +232,211 @@ img {
 }
 .container .row-center .navBar-main {
   display: flex;
+  background-color: #f3e8ea;
 }
 .container .row-center .navBar-main nav a {
   text-decoration: none;
-  padding-left: 3rem;
-  color: #8C2034;
-  font: 'Helvetica';
-  font-size: 3.5rem;
+  padding-left: 1.5rem;
+  color: #1a1a1a;
+  font: 'Arial';
+  font-size: 3rem;
 }
 .container .row-center .img-header {
   width: 700px;
+  height: 400px;
+  background-image: url("/img/new-header-image.jpg");
+  background-position: center;
+  background-size: cover;
+  font-family: 'Livvic';
+  font-size: 2rem;
+  color: ghostwhite;
+  font-weight: bold;
+  text-align: right;
+}
+.container .row-center .img-header .intro-page {
   position: relative;
-  display: inline-block;
+  top: 200px;
+  right: 20px;
 }
-.container .row-center .img-header h1 {
+.container .row-center .img-header button {
   position: relative;
-  z-index: 999;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 40%;
-  text-align: center;
-  color: white;
+  right: 50%;
+  top: 50%;
+  border-radius: 10px;
+  width: 150px;
+  height: 120%;
+  font-size: 3rem;
+  color: ghostwhite;
+  background-color: transparent;
+  border-style: solid;
 }
-.container .row-center img#apexTarget {
-  max-width: 100%;
-  height: auto;
+.container .row-center .img-header button:hover {
+  color: #1a1a1a;
+  background-color: white;
+  border-style: none;
 }
-.container .content-main {
+.container .row-center .img-header p {
+  font-family: 'Livvic';
+  font-size: 2rem;
+  color: ghostwhite;
+  font-weight: bold;
+}
+.container .row-center .content-main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 700px;
   height: 100%;
-  margin-top: 10px;
+  margin-top: 5px;
 }
-.container .content-main .content-main-1 {
+.container .row-center .content-main .content-main-1 {
   display: flex;
   justify-content: space-evenly;
-  background-image: url("/img/icons/light-grey-terrazzo.png");
+  height: auto;
 }
-.container .content-main .content-main-1 .content-main-1-left {
+.container .row-center .content-main .content-main-1 .content-main-1-left {
   width: 1000px;
-  height: 100%;
+  height: auto;
   margin: 0;
 }
-.container .content-main .content-main-1 .content-main-1-left .img {
+.container .row-center .content-main .content-main-1 .content-main-1-left .img {
   max-width: 100%;
   max-height: 100%;
+  border-radius: 20px;
 }
-.container .content-main .content-main-1 .content-main-1-right {
+.container .row-center .content-main .content-main-1 .content-main-1-right {
   flex-grow: 1;
-  height: 100px;
+  height: auto;
 }
-.container .content-main .content-main-2 {
+.container .row-center .content-main .global-issue-1 {
+  display: flex;
+}
+.container .row-center .content-main .content-main-2 {
   display: flex;
   justify-content: space-evenly;
-  background-image: url("/img/icons/light-grey-terrazzo.png");
+  height: auto;
 }
-.container .content-main .content-main-2 .content-main-2-left {
+.container .row-center .content-main .content-main-2 .content-main-2-left {
   flex-grow: 1;
-  height: 100px;
+  height: auto;
 }
-.container .content-main .content-main-2 .content-main-2-right {
+.container .row-center .content-main .content-main-2 .content-main-2-right {
   width: 800px;
-  height: 100px;
+  height: auto;
   margin: 0;
 }
-.container .content-main .content-main-2 .content-main-2-right .img {
+.container .row-center .content-main .content-main-2 .content-main-2-right .img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
-.container .content-main .content-main-3 {
+.container .row-center .content-main .content-main-3 {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.container .footer {
+.container .row-center .content-main .content-main-3 .content-main-3-left {
+  background-image: url("/img/icons/concrete-texture.png");
+  background-color: #BF8F93;
+  color: #1a1a1a;
+  font-family: 'livvic';
+  text-align: center;
+}
+.container .row-center .content-main .content-main-3 .content-main-3-left p {
+  font-size: 3rem;
+}
+.container .row-center .content-main .content-main-3 .content-main-3-middle {
+  background-color: #727D8C;
+  color: whitesmoke;
+  font-family: 'livvic';
+  text-align: center;
+}
+.container .row-center .content-main .content-main-3 .content-main-3-middle p {
+  font-size: 3rem;
+}
+.container .row-center .content-main .content-main-3 .content-main-3-right {
+  background-color: #454C59;
+  color: whitesmoke;
+  font-family: 'livvic';
+  text-align: center;
+}
+.container .row-center .content-main .content-main-3 .content-main-3-right p {
+  font-size: 3rem;
+}
+.container .row-center .footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  background-image: url("/img/icons/concrete-texture.png");
 }
-.container .footer .footer-main {
+.container .row-center .footer .footer-main {
   display: flex;
   justify-content: space-evenly;
 }
-.container .footer .footer-main .footer-4 {
-  width: 80px;
+.container .row-center .footer .footer-main .footer-1 li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #8C2034;
 }
-.container .footer .footer-nav {
+.container .row-center .footer .footer-main .footer-2 li {
+  font-size: 1.5rem;
+  color: #8C2034;
+}
+.container .row-center .footer .footer-main .footer-3 li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #8C2034;
+}
+.container .row-center .footer .footer-main .footer-4 {
+  width: 40px;
+}
+.container .row-center .footer .footer-main .footer-4 h3 {
+  display: block;
+}
+.container .row-center .footer .footer-main .footer-4 li img {
+  max-width: 100%;
+}
+.container .row-center .footer .footer-nav {
   display: flex;
 }
-.row-right {
+.container .row-center .footer .footer-nav nav a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #1a1a1a;
+  text-align: center;
+}
+.container .row-center .footer .footer-copyright {
+  text-align: center;
+}
+.container .row-center .footer .footer-copyright .copyrightSyle {
+  font-size: 4rem;
+  color: #1a1a1a;
+}
+.container .row-right {
   width: 500px;
   display: flex;
   flex-direction: column;
 }
-.row-right .navBar-right {
+.container .row-right .navBar-right {
   max-width: 100%;
 }
-.row-right .navBar-right .navBar-right-nav {
+.container .row-right .navBar-right .navBar-right-nav {
   display: flex;
   justify-content: space-evenly;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-decoration: none;
 }
-.row-right .navBar-right .navBar-right-nav a {
+.container .row-right .navBar-right .navBar-right-nav a {
   text-decoration: none;
   font-weight: bold;
   font-family: 'Helvetica';
-  color: black;
+  color: #1a1a1a;
 }
-.row-right .problem-solution-index {
+.container .row-right .navBar-right .navBar-right-nav a:hover {
+  color: #8C2034;
+  font-size: 3rem;
+}
+.container .row-right .problem-solution-index {
   display: flex;
   flex-direction: column;
   justify-content: space-around;

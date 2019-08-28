@@ -1,20 +1,76 @@
 .container{
     display: flex;
     justify-content: space-around;
+    padding: 20px;
+    align-items: baseline;
 
     .row-left{
         width: 200px;
         display: flex;
         flex-direction: column;
-
+        
         .region{
             .region-overview{
+                border-top: 4px solid @slate-grey;
+                border-bottom: 4px solid @slate-grey;
+
                 .issueList{
-                    display: flex;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+                }
+
+            .region-africa{
+                border-bottom: 4px solid @slate-grey;
+                li{
+                    font-size: 1.5rem;
+                    & a{
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: @shiraz;
+                    }
+                }
+            }
+
+            .region-americas{
+                border-bottom: 4px solid @slate-grey;
+                li{
+                    font-size: 1.5rem;
+                    & a{
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: @shiraz;
+                    }
+                }
+            }
+
+            .region-asia{
+                border-bottom: 4px solid @slate-grey;
+                li{
+                    font-size: 1.5rem;
+                    & a{
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: @shiraz;
+                    }
+                }
+            }
+
+            .region-europe{
+                border-bottom: 4px solid @slate-grey;
+                li{
+                    font-size: 1.5rem;
+                    & a{
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: @shiraz;
+                    }
                 }
             }
         }
+        
     }
+    
     .row-center{
         display: flex;
         flex-direction: column;
@@ -24,86 +80,116 @@
         .navBar-main{
 
             display: flex;
-            // background-color: beige;;
+            background-color: #f3e8ea;
 
             nav a{
                 text-decoration:none;
-                padding-left: 3rem;
-                color: @shiraz;
-                font: @navFont;
-                font-size: 3.5rem;
+                padding-left: 1.5rem;
+                color: #1a1a1a;
+                font: @otherNavFont;
+                font-size: 3rem;
 
             }
         }
         
         .img-header{
             width: 700px;
-            position: relative;
-            display: inline-block;
-            h1{
+            height: 400px;
+            background-image: url("/img/new-header-image.jpg");
+            background-position: center;
+            background-size: cover;
+            font-family: 'Livvic';
+            font-size: 2rem;
+            color: ghostwhite;
+            font-weight: bold;
+            text-align: right;
+
+            .intro-page{
                 position: relative;
-                z-index: 999;
-                margin: 0 auto;
-                left: 0;
-                right: 0;
-                top: 40%; 
-                text-align: center;
-                color: white;
+                top: 200px;
+                right: 20px;
+            }
+
+            button{
+                position: relative;
+                right: 50%;
+                top: 50%;
+                border-radius: 10px;
+                width: 150px;
+                height: 120%;
+                font-size: 3rem;
+                color: ghostwhite;
+                background-color: transparent;
+                border-style: solid;
+
+                &:hover{
+                    color: #1a1a1a;
+                    background-color: white;
+                    border-style: none;
+                }
+                
+            }
+
+            p{
+                font-family: 'Livvic';
+                font-size: 2rem;
+                color: ghostwhite;
+                font-weight: bold;
             }
 
             }
-            img#apexTarget{
-                max-width: 100%;
-                height: auto;
-            }
 
-        }
-    
         .content-main{
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             width: 700px;
             height: 100%;
-            margin-top: 10px;
-            // background-image: url("/img/icons/light-grey-terrazzo.png");
+            margin-top: 5px;
 
             .content-main-1{
                 display: flex;
                 justify-content: space-evenly;
-                background-image: url("/img/icons/light-grey-terrazzo.png");
+                height: auto;
 
                 .content-main-1-left{
                     width: 1000px;
-                    height: 100%;
+                    height: auto;
                     margin: 0;
 
                     .img{
                         max-width: 100%;
                         max-height: 100%;
+                        border-radius: 20px;
                     }
                 }
-
+                
                 .content-main-1-right{
                     flex-grow:1;
-                    height: 100px;
+                    height: auto;
                 }
                 
             }
 
+            .global-issue-1{
+                display: flex;
+            }
+
+
             .content-main-2{
-                
+
                 display: flex;
                 justify-content: space-evenly;
-                background-image: url("/img/icons/light-grey-terrazzo.png");
+                height: auto;
 
                 .content-main-2-left{
                     flex-grow:1;
-                    height: 100px;
+                    height: auto;
                 }
+
                 .content-main-2-right{
                     width: 800px;
-                    height: 100px;
+                    height: auto;
                     margin: 0;
 
                     .img{
@@ -116,6 +202,39 @@
 
             .content-main-3{
                 display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .content-main-3-left{
+                    background-image: url("/img/icons/concrete-texture.png");
+                    background-color: @rosy-brown;
+                    color: #1a1a1a;
+                    font-family: 'livvic';
+                    text-align: center;
+                    p{
+                        font-size: 3rem;
+                    }
+
+                }
+
+                .content-main-3-middle{
+                    background-color: @slate-grey;
+                    color: whitesmoke;
+                    font-family: 'livvic';
+                    text-align: center;
+                    p{
+                        font-size: 3rem;
+                    }
+                }
+
+                .content-main-3-right{
+                    background-color: @tuna;
+                    color: whitesmoke;
+                    font-family: 'livvic';
+                    text-align: center;
+                    p{
+                        font-size: 3rem;
+                    }
+                }
             }
 
         }
@@ -124,22 +243,78 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            background-image: url("/img/icons/concrete-texture.png");
 
             .footer-main{
                 display: flex;
                 justify-content: space-evenly;
 
-                .footer-4{
-                    width: 80px;
+                .footer-1{
+                    li{
+                        & a{
+                            text-decoration: none;
+                            font-size: 1.5rem;
+                            color: @shiraz;
+                        }
+                    }
                 }
+
+                .footer-2{
+                    li{
+                        font-size: 1.5rem;
+                        color: @shiraz;
+                    }
+                }
+
+                .footer-3{
+                    li{
+                        & a{
+                            text-decoration: none;
+                            font-size: 1.5rem;
+                            color: @shiraz;
+                        }
+                    }
+                }
+
+                .footer-4{
+                    width: 40px;
+                    h3 {
+                        display: block;
+                    }
+                    li{
+                        & img{
+                            max-width: 100%;
+
+                        }
+                    }
+                }
+
             }
 
             .footer-nav {
                 display: flex;
+                nav{
+                    a{
+                        text-decoration: none;
+                        font-size: 2rem;
+                        color: #1a1a1a;
+                        text-align: center;
+                    }
+                }
             }
+
+            .footer-copyright{
+                text-align: center;
+                .copyrightSyle{
+                    font-size: 4rem;
+                    color: #1a1a1a;
+                }
+              
+                }
         }
     }
-
+            
+    
     .row-right{
         width: 500px;
         display: flex;
@@ -149,14 +324,18 @@
             .navBar-right-nav{
                 display: flex;
                 justify-content: space-evenly;
-                font-size: 1.5rem;
+                font-size: 2rem;
                 // background-color: @slate-grey;
                 text-decoration: none;
                 a{
                    text-decoration: none; 
                    font-weight: bold;
                    font-family: @navFont;
-                   color: black;
+                   color: #1a1a1a;
+                   &:hover{
+                       color: @shiraz;
+                       font-size: 3rem;
+                   }
                 }
 
                 
@@ -170,5 +349,5 @@
             justify-content: space-around;
      
         }
-    
+    }
 }
