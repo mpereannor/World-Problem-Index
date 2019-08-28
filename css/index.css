@@ -162,12 +162,15 @@ img {
 }
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .container .row-left {
   width: 200px;
   display: flex;
   flex-direction: column;
+}
+.container .row-left .region .region-overview .issueList {
+  display: flex;
 }
 .container .row-center {
   display: flex;
@@ -180,205 +183,115 @@ img {
 }
 .container .row-center .navBar-main nav a {
   text-decoration: none;
-  padding-left: 6rem;
+  padding-left: 3rem;
   color: #8C2034;
-  font-size: 2em;
+  font: 'Helvetica';
+  font-size: 3.5rem;
 }
 .container .row-center .img-header {
   width: 700px;
+  position: relative;
+  display: inline-block;
 }
-.container .row-center .img-header img#apexTarget {
+.container .row-center .img-header h1 {
+  position: relative;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 40%;
+  text-align: center;
+  color: white;
+}
+.container .row-center img#apexTarget {
   max-width: 100%;
   height: auto;
 }
-.container .row-center .content-main {
+.container .content-main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 700px;
   height: 100%;
+  margin-top: 10px;
 }
-.container .row-center .content-main .content-main-1 {
+.container .content-main .content-main-1 {
   display: flex;
+  justify-content: space-evenly;
+  background-image: url("/img/icons/light-grey-terrazzo.png");
 }
-.container .row-center .content-main .content-main-1 .content-main-1-left {
-  width: 800px;
-  height: 100px;
+.container .content-main .content-main-1 .content-main-1-left {
+  width: 1000px;
+  height: 100%;
   margin: 0;
-  border: 4px solid red;
 }
-.container .row-center .content-main .content-main-1 .content-main-1-left .img {
+.container .content-main .content-main-1 .content-main-1-left .img {
   max-width: 100%;
+  max-height: 100%;
 }
-.container .row-center .content-main .content-main-1 .content-main-1-right {
+.container .content-main .content-main-1 .content-main-1-right {
   flex-grow: 1;
   height: 100px;
 }
-.container .row-center .content-main .content-main-2 {
+.container .content-main .content-main-2 {
   display: flex;
+  justify-content: space-evenly;
+  background-image: url("/img/icons/light-grey-terrazzo.png");
 }
-.container .row-center .content-main .content-main-2 .content-main-2-left {
+.container .content-main .content-main-2 .content-main-2-left {
   flex-grow: 1;
   height: 100px;
 }
-.container .row-center .content-main .content-main-2 .content-main-2-right {
+.container .content-main .content-main-2 .content-main-2-right {
   width: 800px;
   height: 100px;
   margin: 0;
-  border: 4px solid red;
 }
-.container .row-center .content-main .content-main-2 .content-main-2-right .img {
+.container .content-main .content-main-2 .content-main-2-right .img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
-.container .row-center .content-main .content-main-3 {
+.container .content-main .content-main-3 {
   display: flex;
 }
-.container .row-center .footer {
+.container .footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.container .row-center .footer .footer-main {
+.container .footer .footer-main {
+  display: flex;
+  justify-content: space-evenly;
+}
+.container .footer .footer-main .footer-4 {
+  width: 80px;
+}
+.container .footer .footer-nav {
   display: flex;
 }
-.container .row-center .footer .footer-nav {
-  display: flex;
-}
-.container .row-right {
+.row-right {
   width: 500px;
   display: flex;
   flex-direction: column;
 }
-/* .container .row-right .problem-solution-index .problem .problem-table .p-table {
-  width: 100%;
-  height: auto;
-  border: 1px solid black;
-  background-color: pink; */
+.row-right .navBar-right {
+  max-width: 100%;
 }
-/* .container .row-right .problem-solution-index .solution .experiment-table table { */
-  /* background-color: pink; */
-/* } */
-
-
-/*[ Table ]*/
-
-.table100 {
-  background-color:blue;
+.row-right .navBar-right .navBar-right-nav {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
-
-table {
-  width: 100%;
+.row-right .navBar-right .navBar-right-nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Helvetica';
+  color: black;
 }
-
-th, td {
-  font-weight: unset;
-  padding-right: 10px;
+.row-right .problem-solution-index {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-
-.column1 {
-  width: 33%;
-  padding-left: 40px;
-}
-
-.column2 {
-  width: 13%;
-}
-
-.column3 {
-  width: 22%;
-}
-
-.column4 {
-  width: 19%;
-}
-
-.column5 {
-  width: 13%;
-}
-
-.table100-head th {
-  padding-top: 18px;
-  padding-bottom: 18px;
-}
-
-.table100-body td {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-/*[ Fix header ]*/
-.header-actual{
-    background-color:#73172F;
-    padding-top: 60px;
-}
-
-.table100 {
-  position: relative;
-  padding-top: 60px;
-}
-
-.table100-head table {
-  position: relative; 
-  width: 100%;
-  top: 0;
-  left: 0;
-
-}
-
-.table100-body {
-  max-height: 585px;
-  overflow: auto;
-}
-
-.table100.ver1 th {
-    font-family: Lato-Bold;
-    font-size: 18px;
-    color:blue;
-    line-height: 1.4;
-  
-    background-color: #6c7ae0;
-  }
-  
-  /* .experiment-table td {
-    font: 'Times New Roman';
-    font-size: 40px;
-    color: #808080;
-    line-height: 1.4;
-  } */
-  
-  .table100-body tr:nth-child(even) {
-    background-color: #BF8F93;
-  }
-
-  .table100-body tr:nth-child(odd) {
-    background-color: #727D8C;
-  }
-  
-  
-  /*---------------------------------------------*/
-  
-  /* .table100.ver1 {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
-    -webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
-    -o-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
-    -ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
-  }  */
-  
-  /* .table100.ver1 .ps__rail-y {
-    right: 5px;
-  } */
-  
-  /* .table100.ver1 .ps__rail-y::before {
-    background-color: #ebebeb;
-  } */
-  
-  /* .table100.ver1 .ps__rail-y .ps__thumb-y::before {
-    background-color: #cccccc;
-  }
-   */
-  
