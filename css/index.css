@@ -328,7 +328,7 @@ img {
 .container .row-center .img-header {
   width: 700px;
   height: 400px;
-  background-image: url("/img/new-header-image.jpg");
+  background-image: url("../img/new-header-image.jpg");
   background-position: center;
   background-size: cover;
   font-family: 'Livvic';
