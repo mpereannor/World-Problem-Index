@@ -1,15 +1,23 @@
 .container{
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    padding: 0px 20px;
     align-items: baseline;
+        
 
     .row-left{
         width: 200px;
         display: flex;
         flex-direction: column;
+        padding-right: 10px;
+        @media @mobile{
+            display:none;
+        }
         
         .region{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
             .region-overview{
                 border-top: 4px solid @slate-grey;
                 border-bottom: 4px solid @slate-grey;
@@ -17,6 +25,7 @@
                 .issueList{
                     font-size: 1.5rem;
                     font-weight: bold;
+                    line-height: 1.5;
                 }
                 }
 
@@ -76,22 +85,86 @@
         flex-direction: column;
         justify-content: space-around;
         flex-grow: 1;
+        align-self: stretch;
+        padding-right: 10px;
 
         .navBar-main{
 
             display: flex;
-            background-color: #f3e8ea;
+            background-color: beige;
+            padding-top: 10px;
+            padding-bottom: 10px;
 
+            &:hover{
+                background-color: seashell;
+            }
+
+            .mobile-logo{
+                display: none;
+                @media @mobile{  
+                    display: inline;
+                    max-width: 50%;
+                    height: auto;
+                }
+            }
+           
             nav a{
                 text-decoration:none;
                 padding-left: 1.5rem;
                 color: #1a1a1a;
                 font: @otherNavFont;
-                font-size: 3rem;
+                font-size: 1.5rem;
+                font-weight: bold;
+
+                &:hover{
+                    color: @shiraz;
+                }
+
+                @media @mobile{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    font-size: 3rem;
+                    padding-bottom: 30px;
+
+                }
 
             }
         }
         
+        .mobile-ad-1{
+            display: none;
+
+            @media @mobile{
+                display: block;
+                height: 300px;
+                background-image: url("/img/new-header-image.jpg");
+                background-position: center;
+                background-size: cover;
+                color: black;
+                font-weight: bold;
+
+                button{
+                    position: relative;
+                    left: 8%;
+                    top: 10px;
+                    border-radius: 10px;
+                    width: 100px;
+                    height: 20%;
+                    font-size: 2rem;
+                    color: ghostwhite;
+                    background-color: transparent;
+                    border-style: solid;
+    
+                    &:hover{
+                        color: #1a1a1a;
+                        background-color: white;
+                        border-style: none;
+                    }
+                }   
+            }
+            
+        }
         .img-header{
             width: 700px;
             height: 400px;
@@ -104,9 +177,13 @@
             font-weight: bold;
             text-align: right;
 
+            @media @mobile{
+                display: none;
+            }
+
             .intro-page{
                 position: relative;
-                top: 200px;
+                top: 100px;
                 right: 20px;
             }
 
@@ -137,7 +214,7 @@
                 font-weight: bold;
             }
 
-            }
+        }
 
         .content-main{
             display: flex;
@@ -146,33 +223,47 @@
             width: 700px;
             height: 100%;
             margin-top: 5px;
+            
+
+            @media @mobile{
+                width: 500px;;
+            }
 
             .content-main-1{
                 display: flex;
                 justify-content: space-evenly;
                 height: auto;
 
+
                 .content-main-1-left{
                     width: 1000px;
                     height: auto;
                     margin: 0;
 
-                    .img{
-                        max-width: 100%;
-                        max-height: 100%;
-                        border-radius: 20px;
+                    @media @mobile{
+                        display: none;
                     }
+
                 }
                 
                 .content-main-1-right{
                     flex-grow:1;
                     height: auto;
+                    @media @mobile{
+                        background-image: url("/img/icons/concrete-texture.png");
+                    }
                 }
                 
             }
 
             .global-issue-1{
                 display: flex;
+                flex-direction: column;
+
+                @media @mobile{
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
             }
 
 
@@ -181,16 +272,24 @@
                 display: flex;
                 justify-content: space-evenly;
                 height: auto;
-
+               
                 .content-main-2-left{
                     flex-grow:1;
                     height: auto;
+    
+                    @media @mobile{
+                        background-image: url("/img/icons/concrete-texture.png");
+                    }
                 }
 
                 .content-main-2-right{
                     width: 800px;
                     height: auto;
                     margin: 0;
+
+                    @media @mobile{
+                        display: none;
+                    }
 
                     .img{
                         max-width: 100%;
@@ -200,16 +299,32 @@
                 }
             }
 
+            .global-issue-2{
+                display: flex;
+                flex-direction: column;
+
+                @media @mobile{
+                    display: none;
+                }
+            }
+
             .content-main-3{
                 display: flex;
                 flex-direction: row;
-                justify-content: space-around;
+                justify-content: space-evenly;
+
+                @media @mobile{
+                    display: none;
+                }
+
                 .content-main-3-left{
+                    border-radius: 40px;
                     background-image: url("/img/icons/concrete-texture.png");
                     background-color: @rosy-brown;
                     color: #1a1a1a;
                     font-family: 'livvic';
                     text-align: center;
+
                     p{
                         font-size: 3rem;
                     }
@@ -217,29 +332,47 @@
                 }
 
                 .content-main-3-middle{
-                    background-color: @slate-grey;
+                    border-radius: 40px;
+                    background-color: lightgrey;
                     color: whitesmoke;
                     font-family: 'livvic';
                     text-align: center;
+
                     p{
                         font-size: 3rem;
                     }
                 }
 
                 .content-main-3-right{
-                    background-color: @tuna;
+                    border-radius: 40px;
+                    background-color: beige;
                     color: whitesmoke;
                     font-family: 'livvic';
                     text-align: center;
+
                     p{
                         font-size: 3rem;
                     }
                 }
             }
 
+            .mobile-ad-2{
+
+                display: none;
+
+                @media @mobile{
+                    display: block;
+                    height: 300px;
+                    background-image: url("/img/yawing-children.jpg");
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+
         }
 
         .footer{
+
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -247,70 +380,81 @@
 
             .footer-main{
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: space-around;
+                padding-top: 5px;
 
                 .footer-1{
+
                     li{
+
                         & a{
                             text-decoration: none;
                             font-size: 1.5rem;
                             color: @shiraz;
+                            line-height: 2;
+                            font-weight: bold;
                         }
                     }
                 }
 
                 .footer-2{
+
                     li{
                         font-size: 1.5rem;
                         color: @shiraz;
+                        line-height: 2;
+                        font-weight: bold;
                     }
                 }
 
                 .footer-3{
+
                     li{
+
                         & a{
                             text-decoration: none;
                             font-size: 1.5rem;
                             color: @shiraz;
+                            line-height: 2;
+                            font-weight: bold;
                         }
                     }
                 }
 
-                .footer-4{
-                    width: 40px;
-                    h3 {
-                        display: block;
-                    }
-                    li{
-                        & img{
-                            max-width: 100%;
-
-                        }
-                    }
-                }
-
+               
             }
 
             .footer-nav {
                 display: flex;
+                justify-content: space-around;
+
                 nav{
+
                     a{
                         text-decoration: none;
                         font-size: 2rem;
                         color: #1a1a1a;
-                        text-align: center;
+                        padding-left: 40px;
+                        font-weight: bold;
                     }
                 }
             }
 
+            .footer-4{
+                padding-left: 45px;
+                img{
+                    width: 10%;
+                    padding-right: 20px;
+                }
+
+            }    
+        
+
             .footer-copyright{
                 text-align: center;
-                .copyrightSyle{
-                    font-size: 4rem;
-                    color: #1a1a1a;
-                }
-              
-                }
+                font-size: 2em;
+                color: #1a1a1a;
+            }
         }
     }
             
@@ -319,26 +463,67 @@
         width: 500px;
         display: flex;
         flex-direction: column;
+        align-self: stretch;
+
+        @media @mobile{
+            display: none;
+        }
+
         .navBar-right{
-            max-width: 100%;
+
             .navBar-right-nav{
                 display: flex;
+                background-color: beige;
                 justify-content: space-evenly;
-                font-size: 2rem;
-                // background-color: @slate-grey;
-                text-decoration: none;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                max-width: 100%;
+
+                &:hover{
+                    background-color: @slate-grey;
+                }
+
                 a{
-                   text-decoration: none; 
-                   font-weight: bold;
-                   font-family: @navFont;
-                   color: #1a1a1a;
-                   &:hover{
-                       color: @shiraz;
-                       font-size: 3rem;
-                   }
+
+                    text-decoration:none;
+                    padding-left: 1.5rem;
+                    color: #1a1a1a;
+                    font: @otherNavFont;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    border-left: 4px solid @tuna;
+
+
+    
+                    &:hover{
+                        color: @shiraz;
+                    }
+
                 }
 
                 
+            }
+        }
+
+        .search{
+            width: 80%;
+            height: auto;
+            align-content: center;
+            padding-left: 40px;
+            
+            input{
+                font-size: 2rem;
+                max-width: 50%;
+                background-color: @tuna;
+                color: white;
+            }
+
+            button{
+                font-size: 2rem;
+                color: @tuna;                background-color: transparent;
+                border-style: groove;
+                font-family: 'Livvic';
+    
             }
         }
 
@@ -347,7 +532,15 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-     
+
         }
+
+        .problem-inforgraphic{
+            h2{
+                text-align: center;
+            }
+            
+        }
+        
     }
 }
