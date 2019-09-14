@@ -1,0 +1,49 @@
+
+.container-join{
+    padding: 20px;
+    display: flex;
+    font-family: Helvetica, sans-serif;
+    font-size: 3rem;
+}
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 8px solid #BF8F93;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 40px; 
+    margin-bottom: 16px; 
+    resize: vertical 
+  }
+  
+  input[type=submit] {
+    background-color: #8C2034;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #73172F;
+  }
+  
+.container-join {
+    border-radius: 5px;
+    background-image: url("/img/icons/concrete-texture.png");
+    background-repeat: repeat;
+    background-color: lightgray;
+    padding: 20px;
+  }
+@media (max-width: 550px){
+    .container-join .picture-right{
+        display: none;
+    }
+
+ }
+  
+.container-join .form-left{
+      padding-right: 20px;
+  }
